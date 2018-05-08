@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  PropsRoute
+  Switch
 } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import Scheduling from './Scheduling';
@@ -18,9 +18,12 @@ class RouterComponent extends Component {
       <div className="router_container">
         <Router>
           <div className="router_child_div">
-            <Route exact path="/" component={LandingPage} />
+            <Switch>
+              <Route exact path="/" component={LandingPage} />
+              <Route component={ErrorComponent} />
+
+            </Switch>
             {/* <Route exact path="/scheduling" component={Scheduling} /> */}
-            <Route path="/*" component={ErrorComponent} />
           </div>
         </Router>
       </div>
