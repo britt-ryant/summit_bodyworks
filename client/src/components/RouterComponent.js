@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import LandingPage from './LandingPage';
 import Scheduling from './Scheduling';
+import ErrorComponent from './ErrorComponent';
 
 class RouterComponent extends Component {
   constructor(props){
@@ -18,7 +19,8 @@ class RouterComponent extends Component {
         <Router>
           <div className="router_child_div">
             <Route exact path="/" component={LandingPage} />
-            <Route exact path="/scheduling" component={Scheduling} />
+            {/* <Route exact path="/scheduling" component={Scheduling} /> */}
+            <Route path="/*" component={ErrorComponent} />
           </div>
         </Router>
       </div>

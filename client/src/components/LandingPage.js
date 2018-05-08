@@ -42,7 +42,7 @@ class LandingPage extends Component {
                 <li><button className="nav_button" onClick={() => this.scrollToFuction("Carousel")}>Top</button></li>
                 <li><button className="nav_button" onClick={() => this.scrollToFuction("Instructors")}>Instructors</button></li>
                 <li><button className="nav_button" onClick={() => this.scrollToFuction("Classes")}>Classes</button></li>
-                <Link to="/scheduling">Scheduling</Link>
+                {/* <Link to="/scheduling">Scheduling</Link> */}
               </ul>
             </nav>
             <div className="sections_container">
