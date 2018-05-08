@@ -4,7 +4,7 @@ class Classes extends Component {
   render(){
     return(
     <div className="classes_container">
-      <h2>I am the classes seciton</h2>
+      <h2>I am the classes section</h2>
     </div>
     )
   }

@@ -7,12 +7,13 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 import registerServiceWorker from './registerServiceWorker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // import TestComponent from './components/TestComponent';
-import LandingPage from './components/LandingPage';
+// import LandingPage from './components/LandingPage';
+import RouterComponent from './components/RouterComponent';
 
 
 const App = () => (
   <MuiThemeProvider>
-    <LandingPage />
+    <RouterComponent />
   </MuiThemeProvider>
 )
 
