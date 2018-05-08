@@ -8,6 +8,7 @@ import {
 import LandingPage from './LandingPage';
 import Scheduling from './Scheduling';
 import ErrorComponent from './ErrorComponent';
+import Instructors from './Instructors';
 
 class RouterComponent extends Component {
   constructor(props){
@@ -20,6 +21,7 @@ class RouterComponent extends Component {
           <div className="router_child_div">
             <Switch>
               <Route exact path="/" component={LandingPage} />
+              <Route exact path="/instructors" component={Instructors} />
               <Route component={ErrorComponent} />
 
             </Switch>
