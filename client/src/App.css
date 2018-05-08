@@ -18,6 +18,7 @@
   font-size: 1.5em;
 }
 
+
 .App-intro {
   font-size: large;
 }
@@ -48,6 +49,7 @@ nav{
   width: 100vw;
   height: 50px;
   top: 0;
+  color: grey;
 }
 
 button{
@@ -66,6 +68,9 @@ ul{
 
 li{
   display: inline;
+  text-align: center;
+  margin: 10vh 5vw;
+
 }
 body{
   text-align: center;
@@ -75,3 +80,20 @@ h2{
   border: 2px solid black;
   margin: 50vh auto 0 auto;
 }
+
+.carousel_container{
+  position: relative;
+  top: 5vh;
+  /* width: 100vw; */
+}
+
+.carousel img{
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+  /* height: 75vh; */
+  /* height: 20vh; */
+}
+/* .carousel-inner{
+  height: 75vh;
+} */

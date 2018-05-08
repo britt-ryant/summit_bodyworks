@@ -20,10 +20,9 @@ class RouterComponent extends Component {
           <div className="router_child_div">
             <Switch>
               <Route exact path="/" component={LandingPage} />
+              {/* <Route exact path="/scheduling" component={Scheduling} /> */}
               <Route component={ErrorComponent} />
-
             </Switch>
-            {/* <Route exact path="/scheduling" component={Scheduling} /> */}
           </div>
         </Router>
       </div>

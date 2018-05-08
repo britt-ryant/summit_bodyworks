@@ -8,7 +8,7 @@ import {
   Route
 } from 'react-router-dom';
 
-import Carousel from './Carousel'
+import Carousel from './CarouselComponent'
 import Classes from './Classes';
 import Instructors from './Instructors';
 import Scheduling from './Scheduling';
