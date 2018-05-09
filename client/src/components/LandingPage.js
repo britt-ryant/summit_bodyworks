@@ -13,6 +13,9 @@ import Classes from './Classes';
 import Instructors from './Instructors';
 import Scheduling from './Scheduling';
 import { Parallax } from 'react-parallax';
+import ScrollAnimation from 'react-animate-on-scroll';
+import TrackVisibility from 'react-on-screen';
+import Fade from 'react-reveal/Fade';
 
 import imageOne from '../images/backgroundOne.png';
 import imageTwo from '../images/backgroundTwo.png';
@@ -22,6 +25,9 @@ import imageThree from '../images/photoTwo.jpg';
 class LandingPage extends Component {
   constructor(props){
     super(props);
+    this.state={
+      isVisible: false,
+    }
   }
   scrollToFuction(data){
     switch(data) {
@@ -54,15 +60,25 @@ class LandingPage extends Component {
             <div>
               <Parallax bgImage={imageOne}
                 strength={500}>
+                {/* <nav>
+                  <ul>
+                    <li><button className="nav_button" onClick={() => this.scrollToFuction("Carousel")}>Top</button></li>
+                    <li><button className="nav_button" onClick={() => this.scrollToFuction("Instructors")}>Instructors</button></li>
+                    <li><button className="nav_button" onClick={() => this.scrollToFuction("Classes")}>Classes</button></li>
+                    <Link to="/scheduling">Scheduling</Link>
+                  </ul>
+                </nav> */}
                 <div className='background-div' style={{height: '100vh'}}>
                   <div style={insideStyles}>HTML inside the parallax</div>
                 </div>
                 <div className="title">
-                  Photos
-                </div>
+                <TrackVisibility offset={20}>
+                   {({ isVisible }) => isVisible ? <Fade>Photos</Fade> : <div className='no-text'></div>}
+                </TrackVisibility>
+              </div>
               </Parallax>
               <div className="padding-div">
-                <Carousel />
+                <section className="Carousel" ref={(section) => {this.Carousel = section; }}><Carousel /></section>
               </div>
               <Parallax bgImage={imageTwo} strength={500}>
                 <div className='background-div' style={{height: '100vh'}}>
