@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -17,8 +17,6 @@
 .App-title {
   font-size: 1.5em;
 }
-
-
 .App-intro {
   font-size: large;
 }
@@ -70,30 +68,35 @@ li{
   display: inline;
   text-align: center;
   margin: 10vh 5vw;
-
 }
 body{
   text-align: center;
-  /* margin: 50px auto 0 auto; */
 }
 h2{
   border: 2px solid black;
   margin: 50vh auto 0 auto;
 }
+*/
 
 .carousel_container{
-  position: relative;
-  top: 5vh;
-  /* width: 100vw; */
+  height: 60vh;
+  overflow: hidden;
 }
-
 .carousel img{
   width: 100vw;
-  height: 50vh;
-  overflow: hidden;
-  /* height: 75vh; */
-  /* height: 20vh; */
+  /* height: 50vh; */
+  /* background-size: cover; */
+  /* overflow: hidden; */
 }
 /* .carousel-inner{
   height: 75vh;
 } */
+
+
+.padding-div{
+  padding: 2% 0;
+  overflow: hidden;
+}
+.background-div{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
