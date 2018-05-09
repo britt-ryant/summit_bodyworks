@@ -25,9 +25,6 @@ import imageThree from '../images/photoTwo.jpg';
 class LandingPage extends Component {
   constructor(props){
     super(props);
-    this.state={
-      isVisible: false,
-    }
   }
   scrollToFuction(data){
     switch(data) {
@@ -49,14 +46,6 @@ class LandingPage extends Component {
     const insideStyles = {background: 'white', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
     return(
       <div className="main_app_container">
-            {/* <nav> */}
-              {/* <ul> */}
-                {/* <li><button className="nav_button" onClick={() => this.scrollToFuction("Carousel")}>Top</button></li> */}
-                {/* <li><button className="nav_button" onClick={() => this.scrollToFuction("Instructors")}>Instructors</button></li> */}
-                {/* <li><button className="nav_button" onClick={() => this.scrollToFuction("Classes")}>Classes</button></li> */}
-                {/* <Link to="/scheduling">Scheduling</Link> */}
-              {/* </ul> */}
-            {/* </nav> */}
             <div>
               <Parallax bgImage={imageOne}
                 strength={500}>
@@ -73,7 +62,7 @@ class LandingPage extends Component {
                 </div>
                 <div className="title">
                 <TrackVisibility offset={20}>
-                   {({ isVisible }) => isVisible ? <Fade>Photos</Fade> : <div className='no-text'></div>}
+                 <Fade>Photos</Fade>
                 </TrackVisibility>
               </div>
               </Parallax>
@@ -82,7 +71,7 @@ class LandingPage extends Component {
               </div>
               <Parallax bgImage={imageTwo} strength={500}>
                 <div className='background-div' style={{height: '100vh'}}>
-                  <div style={insideStyles}>Dynamic Blur</div>
+                  <Classes />
                 </div>
               </Parallax>
               <h1>| | |</h1>
