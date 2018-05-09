@@ -57,6 +57,9 @@ class LandingPage extends Component {
                 <div className='background-div' style={{height: '100vh'}}>
                   <div style={insideStyles}>HTML inside the parallax</div>
                 </div>
+                <div className="title">
+                  Photos
+                </div>
               </Parallax>
               <div className="padding-div">
                 <Carousel />
