@@ -4093,6 +4093,10 @@ jest@20.0.4:
   dependencies:
     jest-cli "^20.0.4"
 
+jquery@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+
 js-base64@^2.1.9:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.3.tgz#2e545ec2b0f2957f41356510205214e98fad6582"
@@ -4484,6 +4488,10 @@ material-ui@^0.20.0:
     recompose "^0.26.0"
     simple-assign "^0.1.0"
     warning "^3.0.0"
+
+materialize@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/materialize/-/materialize-1.0.0.tgz#3e91c8a8c25475a7324e062ba34baf71c4a334aa"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
@@ -5790,6 +5798,10 @@ react-overlays@^0.8.0:
     react-transition-group "^2.2.0"
     warning "^3.0.0"
 
+react-parallax@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-1.7.0.tgz#0f7e1a997cd78e517bda45536cbefea48891c5bf"
+
 react-prop-types@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/react-prop-types/-/react-prop-types-0.4.0.tgz#f99b0bfb4006929c9af2051e7c1414a5c75b93d0"
@@ -5848,6 +5860,12 @@ react-scripts@1.1.4:
     whatwg-fetch "2.0.3"
   optionalDependencies:
     fsevents "^1.1.3"
+
+react-scroll-parallax@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/react-scroll-parallax/-/react-scroll-parallax-1.3.3.tgz#b4930039b4311c62b3a9d369cebc7f30b3cffed6"
+  dependencies:
+    prop-types "^15.5.10"
 
 react-scroll-to-component@^1.0.2:
   version "1.0.2"

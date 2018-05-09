@@ -9,12 +9,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // import TestComponent from './components/TestComponent';
 // import LandingPage from './components/LandingPage';
 import RouterComponent from './components/RouterComponent';
-
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const App = () => (
-  <MuiThemeProvider>
+  <ParallaxProvider>
     <RouterComponent />
-  </MuiThemeProvider>
+  </ParallaxProvider>
 )
 
 ReactDOM.render(<App />, document.getElementById('root'));

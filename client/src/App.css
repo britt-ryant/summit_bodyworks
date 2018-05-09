@@ -1,99 +1,69 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.Carousel {
-  height: 100vh;
-  border: 2px solid black;
-}
-
-.Instructors {
-  height: 100vh;
-  border: 2px solid black;
-}
-
-.Classes {
-  height: 100vh;
-  border: 2px solid black;
-}
-
-nav{
-  border: 2px solid black;
-  position: fixed;
-  width: 100vw;
-  height: 50px;
-  top: 0;
-  color: grey;
-}
-
-button{
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-}
-
-ul{
-  list-style: none;
-}
-
-li{
-  display: inline;
-  text-align: center;
-  margin: 10vh 5vw;
-
-}
-body{
-  text-align: center;
-  /* margin: 50px auto 0 auto; */
-}
-h2{
-  border: 2px solid black;
-  margin: 50vh auto 0 auto;
-}
-
-.carousel_container{
+.black-circle {
   position: relative;
-  top: 5vh;
-  /* width: 100vw; */
+  display: table;
+  width: 100%;
 }
-
-.carousel img{
-  width: 100vw;
-  height: 50vh;
-  overflow: hidden;
-  /* height: 75vh; */
-  /* height: 20vh; */
+.inner {
+  text-align: center;
+  color: #fff;
 }
-/* .carousel-inner{
-  height: 75vh;
-} */
+.inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+.ct-page_title {
+  height: 640px;
+  display: inline-table;
+  background: #222;
+  border-radius: 50%;
+  width: 640px;
+}
+.ct-page_title h1 {
+  font-size: 75px;
+  line-height: 1;
+  font-family: 'coquette',fantasy;
+  font-weight: 700;
+}
+.ct-page_title h2 {
+  font-size: 34px;
+  font-family: 'nimbus-sans-condensed',sans-serif;
+  font-weight: 400;
+  font-weight: 700;
+  width: 85%;
+  margin: 0 auto;
+}
+.ct-u-paddingBoth120 {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.ct-section_header--type1 {
+  font-family: 'Bebas Neue';
+  color: #000;
+  font-size: 115px;
+  text-transform: uppercase;
+}
+.ct-section_header + p {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+.btn.btn-motive {
+  background-color: #00bff3;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  padding: 20px 50px;
+  font-size: 30px;
+  white-space: normal;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 70px;
+}
+.fa {
+  font-size: 42px;
+  color: #fff;
+  background-color: #00bff3;
+  border-radius: 50%;
+  padding: 12px;
+}
