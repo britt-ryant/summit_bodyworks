@@ -1,0 +1,134 @@
+<<<<<<< HEAD
+=======
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.Carousel {
+  height: 100vh;
+  border: 2px solid black;
+}
+
+.Instructors {
+  height: 100vh;
+  border: 2px solid black;
+}
+
+.Classes {
+  height: 100vh;
+  border: 2px solid black;
+}
+*/
+nav{
+  border: 2px solid black;
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+  top: 0;
+  color: grey;
+}
+
+button{
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  display: inline;
+  text-align: center;
+  margin: 10vh 5vw;
+}
+/*
+body{
+  text-align: center;
+}
+h2{
+  border: 2px solid black;
+  margin: 50vh auto 0 auto;
+}
+*/
+
+.carousel_container{
+  height: 60vh;
+  overflow: hidden;
+}
+.carousel img{
+  width: 100vw;
+  /* height: 50vh; */
+  /* background-size: cover; */
+  /* overflow: hidden; */
+}
+/* .carousel-inner{
+  height: 75vh;
+} */
+
+.title{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  /* background-color: red; */
+  margin: 0;
+  padding: 0;
+  font-size: calc(3vw + 3vh + .7vmin);
+  color: white;
+  padding: 3vh;
+  height: 18vh;
+  z-index: 5;
+  /* position: relative; */
+}
+h2{
+  margin: 0;
+}
+
+.padding-div{
+  padding: 2% 0;
+  overflow: hidden;
+  background-color: black;
+}
+.background-div{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.no-text{
+  display: hidden;
+}
+.content-div{
+  color: white;
+  width: 50vw;
+  height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+>>>>>>> dbcfa938feb40989d78d00853ba3c02db84c7198

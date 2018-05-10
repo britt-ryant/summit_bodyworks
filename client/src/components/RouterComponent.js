@@ -21,11 +21,13 @@ class RouterComponent extends Component {
           <div className="router_child_div">
             <Switch>
               <Route exact path="/" component={LandingPage} />
+<<<<<<< HEAD
               <Route exact path="/instructors" component={Instructors} />
+=======
+              {/* <Route exact path="/scheduling" component={Scheduling} /> */}
+>>>>>>> dbcfa938feb40989d78d00853ba3c02db84c7198
               <Route component={ErrorComponent} />
-
             </Switch>
-            {/* <Route exact path="/scheduling" component={Scheduling} /> */}
           </div>
         </Router>
       </div>
