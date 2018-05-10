@@ -6,8 +6,8 @@ const images = [ photo1, photo2 ];
 
 const Instructors = () => (
   <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <ol className="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     </ol>
     <div className="carousel-inner" role="listbox">
