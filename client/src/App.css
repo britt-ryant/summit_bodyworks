@@ -41,6 +41,9 @@
   border: 2px solid black;
 }
 */
+body{
+  font-family: 'Vollkorn SC', serif;
+}
 nav{
   border: 2px solid black;
   position: fixed;
@@ -128,4 +131,34 @@ h2{
   position: absolute;
   top: 25%;
   left: 25%;
+}
+.title-div{
+  width: 100vw;
+  background-color: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  font-size: calc(4vw + 4vh + .9vmin);
+  color: white;
+  padding: .5em;
+}
+.fa{
+  font-size: calc(4vw + 4vh + .9vmin);
+  color: rgba(255, 255, 255, .5);
+  text-align: center;
+  /* border: 2px solid white; */
+  margin: 0 auto;
+
+}
+
+.scroll-arrow{
+  text-align: center;
+  /* border: 2px solid white; */
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  font-size: calc(1vw + 1vh + .5vmin);
+  color: rgba(255, 255, 255, .5);
+}
+
+.locations-div{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  border: 2px solid white;
 }

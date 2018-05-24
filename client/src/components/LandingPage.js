@@ -12,6 +12,9 @@ import Carousel from './CarouselComponent'
 import Classes from './Classes';
 import Instructors from './Instructors';
 import Scheduling from './Scheduling';
+import Locations from './Locations';
+
+
 import { Parallax } from 'react-parallax';
 import ScrollAnimation from 'react-animate-on-scroll';
 import TrackVisibility from 'react-on-screen';
@@ -43,26 +46,21 @@ class LandingPage extends Component {
   }
 
   render(){
-    const insideStyles = {background: 'white', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
+    const insideStyles = {background: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))', padding: 20, position: 'absolute', top: '75%', left: '50%', transform: 'translate(-50%,-50%)'};
     return(
       <div className="main_app_container">
             <div>
               <Parallax bgImage={imageOne}
                 strength={500}>
-                {/* <nav>
-                  <ul>
-                    <li><button className="nav_button" onClick={() => this.scrollToFuction("Carousel")}>Top</button></li>
-                    <li><button className="nav_button" onClick={() => this.scrollToFuction("Instructors")}>Instructors</button></li>
-                    <li><button className="nav_button" onClick={() => this.scrollToFuction("Classes")}>Classes</button></li>
-                    <Link to="/scheduling">Scheduling</Link>
-                  </ul>
-                </nav> */}
                 <div className='background-div' style={{height: '100vh'}}>
-                  <div style={insideStyles}>HTML inside the parallax</div>
+                  <div className="title-div">
+                    <Fade>Summit Health & Body Works</Fade>
+                  </div>
+                  <div className="scroll-arrow">Scroll Down <br></br><i class="fa fa-angle-down" ></i></div>
                 </div>
                 <div className="title">
                 <TrackVisibility offset={20}>
-                 <Fade>Photos</Fade>
+                 <Fade>Gallery</Fade>
                 </TrackVisibility>
               </div>
               </Parallax>
@@ -77,7 +75,7 @@ class LandingPage extends Component {
               <h1>| | |</h1>
               <Parallax bgImage={imageThree} strength={500}>
                 <div className='background-div' style={{height: '100vh'}}>
-                  <div style={insideStyles}>Reverse direction</div>
+                  <Locations />
                 </div>
               </Parallax>
             </div>
