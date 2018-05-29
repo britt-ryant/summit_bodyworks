@@ -162,3 +162,7 @@ h2{
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   border: 2px solid white;
 }
+
+#mapid {
+  height: 180px,
+}
