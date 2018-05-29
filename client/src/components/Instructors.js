@@ -1,24 +1,32 @@
 import React from 'react';
-import photo1 from '../assets/madlynn_photo1.jpg';
-import photo2 from '../assets/cornelius_photo1.jpg';
+import Slider from 'react-slick';
 
-const images = [ photo1, photo2 ];
+import imageOne from '../assets/cornelius_photo1.jpg';
+import imageTwo from '../assets/madlynn_photo1.jpg';
 
-const Instructors = () => (
-  <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel">
-    <ol className="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    </ol>
-    <div className="carousel-inner" role="listbox">
-      <div className="carousel-item active">
-        <img className="d-block img-fluid" src={photo1} alt="First slide" />
-      </div>
-      <div className="carousel-item">
-        <img className="d-block img-fluid" src={photo2} alt="Second slide" />
-      </div>
-    </div>
-  </div>
-);
+class Instructors extends React.Component {
+  render() {
+    var settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      className: 'center',
+      centerMode: true,
+      centerPadding: '0px',
+    };
+    return (
+      <Slider {...settings}>
+        <div>
+          <img src={imageOne} alt="Cornelius" style={{ margin: 'auto' }}/>
+        </div>
+        <div>
+          <img src={imageTwo} alt="Madlynn" />
+        </div>
+      </Slider>
+    );
+  }
+}
 
 export default Instructors;

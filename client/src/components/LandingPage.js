@@ -81,6 +81,7 @@ class LandingPage extends Component {
                 <div className='background-div' style={{height: '100vh'}}>
                   <Classes />
                 </div>
+                <Instructors />
               </Parallax>
               <h1>| | |</h1>
               <Parallax bgImage={imageThree} strength={500}>
