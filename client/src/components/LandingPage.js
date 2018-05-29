@@ -3,12 +3,7 @@ import scrollToComponent from 'react-scroll-to-component';
 import '../App.css';
 
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-
-<<<<<<< HEAD
-import Carousel from './Carousel';
-=======
 import Carousel from './CarouselComponent'
->>>>>>> dbcfa938feb40989d78d00853ba3c02db84c7198
 import Classes from './Classes';
 import Instructors from './Instructors';
 import Scheduling from './Scheduling';
@@ -57,66 +52,6 @@ class LandingPage extends Component {
     }
   }
 
-<<<<<<< HEAD
-  render() {
-    return (
-      <div className="main_app_container">
-        <nav>
-          <ul>
-            <li>
-              <button
-                className="nav_button"
-                onClick={() => this.scrollToFuction('Carousel')}
-              >
-                Top
-              </button>
-            </li>
-            <li>
-              <button
-                className="nav_button"
-                onClick={() => this.scrollToFuction('Instructors')}
-              >
-                Instructors
-              </button>
-            </li>
-            <li>
-              <button
-                className="nav_button"
-                onClick={() => this.scrollToFuction('Classes')}
-              >
-                Classes
-              </button>
-            </li>
-            {/* <Link to="/scheduling">Scheduling</Link> */}
-          </ul>
-        </nav>
-        <div className="sections_container">
-          <section
-            className="Carousel"
-            ref={section => {
-              this.Carousel = section;
-            }}
-          >
-            <Carousel />
-          </section>
-          <section
-            className="Instructors"
-            ref={section => {
-              this.Instructors = section;
-            }}
-          >
-            <Instructors />
-          </section>
-          <section
-            className="Classes"
-            ref={seciton => {
-              this.Classes = seciton;
-            }}
-          >
-            <Classes />
-          </section>
-        </div>
-=======
   render(){
     const insideStyles = {background: 'white', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
     return(
@@ -161,7 +96,6 @@ class LandingPage extends Component {
               <section className="Instructors" ref={(section) => {this.Instructors = section; }}><Instructors /></section>
               <section className="Classes" ref={(seciton) => {this.Classes = seciton; }}><Classes /></section>
             </div> */}
->>>>>>> dbcfa938feb40989d78d00853ba3c02db84c7198
       </div>
     );
   }
