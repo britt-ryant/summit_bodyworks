@@ -22,12 +22,22 @@ import imageThree from '../images/photoTwo.jpg';
 class LandingPage extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      navmenu: false
+    }
   }
   scrollToFuction(data) {
     switch (data) {
+      case 'LandingPage':
+        scrollToComponent(this.LandingPage, {
+          offset: 0,
+          aligh: 'top',
+          duration: 1500,
+        });
+        break;
       case 'Carousel':
         scrollToComponent(this.Gallery, {
-          offset: -90,
+          offset: -250,
           align: 'top',
           duration: 1500,
         });
@@ -41,13 +51,20 @@ class LandingPage extends Component {
         break;
       case 'Classes':
         scrollToComponent(this.Classes, {
-          offset: 500,
+          offset: 400,
           aligh: 'top',
           duration: 1500,
         });
         break;
+        case 'Locations':
+          scrollToComponent(this.Locations, {
+            offset: 500,
+            aligh: 'top',
+            duration: 1500,
+          });
+          break;
       default:
-        scrollToComponent(this.Carousel, {
+        scrollToComponent(this.LandingPage, {
           offset: 0,
           align: 'top',
           duration: 1500,
@@ -55,32 +72,49 @@ class LandingPage extends Component {
     }
   }
 
+  renderNavBarChange(){
+    this.setState({
+      navmenu: true,
+  },
+  () => console.log("fade in and out"))
+}
+
   render(){
     const insideStyles = {background: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))', padding: 20, position: 'absolute', top: '75%', left: '50%', transform: 'translate(-50%,-50%)'};
     return(
       <div className="main_app_container">
             <div>
-              <nav className="test_button">
-                <button className="actual-test-button" onClick={() => this.scrollToFuction("Carousel")} value="Carousel">Gallery</button>
-                <button className="actual-test-button" onClick={() => this.scrollToFuction("Classes")} value="Classes">Classes</button>
-                <button className="actual-test-button" onClick={() => this.scrollToComponent("Instructors")} value="Instructors">Instructors</button>
-              </nav>
+              <div className="menu-div">
+                <nav className="test_button">
+                  <div className="visible-navbar">
+                    <h1>Summit Health and Body Works</h1>
+                    <button className="actual-test-button" onClick={() => this.scrollToFuction("LandingPage")} value="LandingPage">Home</button>
+                    <button className="actual-test-button" onClick={() => this.scrollToFuction("Carousel")} value="Carousel">Gallery</button>
+                    <button className="actual-test-button" onClick={() => this.scrollToFuction("Classes")} value="Classes">Classes</button>
+                    <button className="actual-test-button" onClick={() => this.scrollToFuction("Instructors")} value="Instructors">Instructors</button>
+                    <button className="actual-test-button" onClick={() => this.scrollToFuction("Locations")} value="Locations">Locations</button>
+                  </div>
+                  <div className="mouse-hover"></div>
+                </nav>
+              </div>
+              <div className="landing-page-for-navbar">
+                <TrackVisibility>{this.renderNavBarChange()}</TrackVisibility>
+              </div>
+              <section className="LandingPage" ref={(seciton) => {this.LandingPage = seciton; }}></section>
               <Parallax bgImage={imageOne}
                 strength={500}>
                 <div className='background-div' style={{height: '100vh'}}>
                   <div className="title-div">
-                    <Fade>Summit Health & Body Works</Fade>
                   </div>
-                  <div className="scroll-arrow"><i class="fa fa-angle-down" ></i></div>
                 </div>
                 <div className="title">
                 <TrackVisibility offset={20}>
-                 <section className="Gallery" ref={(section) => {this.Gallery = section; }}><Fade>Gallery</Fade></section>
+                 <Fade>Gallery</Fade>
                 </TrackVisibility>
               </div>
               </Parallax>
               <div className="padding-div">
-                <section className="Carousel" ref={(section) => {this.Carousel = section; }}><Carousel /></section>
+                <section className="Gallery" ref={(section) => {this.Gallery = section; }}><Carousel /></section>
               </div>
               <Parallax bgImage={imageTwo} strength={500}>
                 <div className='background-div' style={{height: '100vh'}}>
@@ -90,7 +124,7 @@ class LandingPage extends Component {
                 <seciton className="Instructors" ref={(section) => {this.Instructors = section; }}><Instructors /></seciton>
               <Parallax bgImage={imageThree} strength={500}>
                 <div className='background-div' style={{height: '100vh'}}>
-                  <Locations />
+                  <section className="Locations" ref={(section) => {this.Locations = section; }}><Locations /></section>
                 </div>
               </Parallax>
             </div>
