@@ -26,8 +26,8 @@ class LandingPage extends Component {
   scrollToFuction(data) {
     switch (data) {
       case 'Carousel':
-        scrollToComponent(this.Carousel, {
-          offset: 0,
+        scrollToComponent(this.Gallery, {
+          offset: -90,
           align: 'top',
           duration: 1500,
         });
@@ -41,7 +41,7 @@ class LandingPage extends Component {
         break;
       case 'Classes':
         scrollToComponent(this.Classes, {
-          offset: 0,
+          offset: 500,
           aligh: 'top',
           duration: 1500,
         });
@@ -60,17 +60,22 @@ class LandingPage extends Component {
     return(
       <div className="main_app_container">
             <div>
+              <nav className="test_button">
+                <button className="actual-test-button" onClick={() => this.scrollToFuction("Carousel")} value="Carousel">Gallery</button>
+                <button className="actual-test-button" onClick={() => this.scrollToFuction("Classes")} value="Classes">Classes</button>
+                <button className="actual-test-button" onClick={() => this.scrollToComponent("Instructors")} value="Instructors">Instructors</button>
+              </nav>
               <Parallax bgImage={imageOne}
                 strength={500}>
                 <div className='background-div' style={{height: '100vh'}}>
                   <div className="title-div">
                     <Fade>Summit Health & Body Works</Fade>
                   </div>
-                  <div className="scroll-arrow">Scroll Down <br></br><i class="fa fa-angle-down" ></i></div>
+                  <div className="scroll-arrow"><i class="fa fa-angle-down" ></i></div>
                 </div>
                 <div className="title">
                 <TrackVisibility offset={20}>
-                 <Fade>Gallery</Fade>
+                 <section className="Gallery" ref={(section) => {this.Gallery = section; }}><Fade>Gallery</Fade></section>
                 </TrackVisibility>
               </div>
               </Parallax>
@@ -79,10 +84,10 @@ class LandingPage extends Component {
               </div>
               <Parallax bgImage={imageTwo} strength={500}>
                 <div className='background-div' style={{height: '100vh'}}>
-                  <Classes />
+                  <section className="Classes" ref={(section) => {this.Classes = section; }}><Classes /></section>
                 </div>
               </Parallax>
-              <Instructors />
+                <seciton className="Instructors" ref={(section) => {this.Instructors = section; }}><Instructors /></seciton>
               <Parallax bgImage={imageThree} strength={500}>
                 <div className='background-div' style={{height: '100vh'}}>
                   <Locations />
