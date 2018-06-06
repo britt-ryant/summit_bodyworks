@@ -72,43 +72,45 @@ class LandingPage extends Component {
     }
   }
 
-  renderNavBarChange(){
-    this.setState({
-      navmenu: true,
-  },
-  () => console.log("fade in and out"))
+renderLittleNav(data){
+  console.log(data.divClass);
+  return(
+    <div className="menu-div">
+      <nav className={data.navClass}>
+        <div className={data.divClass}>
+          <h1 className={data.title}>Summit Health and Body Works</h1>
+          <button className="actual-test-button" onClick={() => this.scrollToFuction("LandingPage")} value="LandingPage">| Home</button>
+          <button className="actual-test-button" onClick={() => this.scrollToFuction("Carousel")} value="Carousel">| Gallery</button>
+          <button className="actual-test-button" onClick={() => this.scrollToFuction("Classes")} value="Classes">| Classes</button>
+          <button className="actual-test-button" onClick={() => this.scrollToFuction("Instructors")} value="Instructors">| Instructors  </button>
+          <button className="actual-test-button" onClick={() => this.scrollToFuction("Locations")} value="Locations">| Locations</button>
+        </div>
+        <div className="mouse-hover"></div>
+      </nav>
+    </div>
+  )
 }
+
+
+
 
   render(){
     const insideStyles = {background: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))', padding: 20, position: 'absolute', top: '75%', left: '50%', transform: 'translate(-50%,-50%)'};
     return(
       <div className="main_app_container">
             <div>
-              <div className="menu-div">
-                <nav className="test_button">
-                  <div className="visible-navbar">
-                    <h1>Summit Health and Body Works</h1>
-                    <button className="actual-test-button" onClick={() => this.scrollToFuction("LandingPage")} value="LandingPage">Home</button>
-                    <button className="actual-test-button" onClick={() => this.scrollToFuction("Carousel")} value="Carousel">Gallery</button>
-                    <button className="actual-test-button" onClick={() => this.scrollToFuction("Classes")} value="Classes">Classes</button>
-                    <button className="actual-test-button" onClick={() => this.scrollToFuction("Instructors")} value="Instructors">Instructors</button>
-                    <button className="actual-test-button" onClick={() => this.scrollToFuction("Locations")} value="Locations">Locations</button>
-                  </div>
-                  <div className="mouse-hover"></div>
-                </nav>
-              </div>
-              <div className="landing-page-for-navbar">
-                <TrackVisibility>{this.renderNavBarChange()}</TrackVisibility>
-              </div>
               <section className="LandingPage" ref={(seciton) => {this.LandingPage = seciton; }}></section>
               <Parallax bgImage={imageOne}
                 strength={500}>
                 <div className='background-div' style={{height: '100vh'}}>
-                  <div className="title-div">
+                  <div className="spacer">
+                    <TrackVisibility offset={20}>
+                      {({ isVisible }) => isVisible ?  this.renderLittleNav({divClass: "big-navbar", navClass: "landing-button", title: "main-title"}) : this.renderLittleNav({divClass: "visible-navbar", navClass: "test_button", title: "sub-title"})}
+                    </TrackVisibility>
                   </div>
                 </div>
                 <div className="title">
-                <TrackVisibility offset={20}>
+                <TrackVisibility>
                  <Fade>Gallery</Fade>
                 </TrackVisibility>
               </div>

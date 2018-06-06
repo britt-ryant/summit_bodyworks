@@ -44,8 +44,17 @@
 body{
   font-family: 'Vollkorn SC', serif;
 }
-
-nav{
+.landing-button{
+  position: relative;
+  height: 30vh;
+  z-index: 100;
+  width: 100vw;
+  top: 0;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  font-size: 1em;
+}
+.test_button{
   border: 2px solid black;
   position: fixed;
   z-index: 100;
@@ -55,16 +64,21 @@ nav{
   color: white;
   transition-duration: 1s;
 }
-nav:Hover{
+.test_button:Hover{
   top: 0;
   transition-duration: 1s;
 }
 
+.sub-title{
+  text-align: left;
+}
+
 .mouse-hover{
   height: 5vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 .visible-navbar{
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 
 }
 button{
@@ -75,6 +89,7 @@ button{
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  margin: 0 2vw 0 1vw;
 }
 
 button:Hover{
@@ -167,6 +182,9 @@ h2{
   color: white;
   padding: .5em;
   text-align: center;
+  border: 2px solid white;
+  top: 50vh;
+  position: relative;
 }
 .fa{
   font-size: calc(4vw + 4vh + .9vmin);
@@ -192,6 +210,17 @@ h2{
   border: 2px solid white;
 
 }
+
+.main-title{
+  font-size: 5em;
+  text-align: left;
+}
+
+/* .spacer{
+  border: 2px solid white;
+  position: relative;
+  /* top: 70vh; */
+
 
 #mapid {
   height: 180px,
